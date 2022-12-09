@@ -13,5 +13,6 @@ def echo(sentence: str):
 def something(arg) -> str:
     return "hello world"
 
+
 if __name__ == '__main__':
     main()
