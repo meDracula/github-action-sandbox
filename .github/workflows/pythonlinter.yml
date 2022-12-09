@@ -28,7 +28,7 @@ jobs:
         run: |
           # stop the build if there are Python syntax errors or undefined names. The is 127 chars wide
           #pycodestyle . --count --select=E9,F63,F7,F82 --show-source --max-line-length=127 --statistics
-          pycodestyle . --count --show-source --max-line-length=127 --statistics
+          pycodestyle api/. --count --show-source --max-line-length=127 --statistics
       - name: Test with pylint
         run: |
-          pylint . --rcfile=.github/workflows/vanilla.rc
+          pylint api/. --rcfile=.github/workflows/vanilla.rc
