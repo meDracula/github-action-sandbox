@@ -1,15 +1,16 @@
-name: Python package
+name: Python Linting
 
 on:
   pull_request:
     branches:
       - main
-
+  push:
+    branches:
+      - main
 
 jobs:
   Pep8:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         python-version: ["3.10"]
@@ -23,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pycodestyle pylint
+          pip install pycodestyle
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Lint with Pep8
         run: |
@@ -32,7 +33,6 @@ jobs:
 
   Pylint:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         python-version: ["3.10"]
@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pycodestyle pylint
+          pip install pylint
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Test with pylint
         run: |
