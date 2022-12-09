@@ -1,3 +1,6 @@
+import app
+
+
 def main():
     # COMMENT
     echo("Hello word")
