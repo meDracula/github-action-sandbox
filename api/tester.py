@@ -1,17 +1,15 @@
-import app
-
-
 def main():
     # COMMENT
-    echo("Hello word")
+    echo("Hello World")
 
 
 def echo(sentence: str):
     print(sentence)
+    print(say_something())
 
 
-def something(arg) -> str:
-    return "hello world"
+def say_something() -> str:
+    return "Hello World"
 
 
 if __name__ == '__main__':
