@@ -1,2 +1,2 @@
 # github-action-sandbox
-Developing &amp; Testingg github actions.
+Developing &amp; Testing github actions.
